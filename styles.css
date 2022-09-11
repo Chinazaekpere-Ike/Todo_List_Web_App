@@ -1,9 +1,14 @@
+button {
+  color: purple;
+  font-size: 13px !important;
+}
+
 .container {
   background: linear-gradient(#f8effc, #ae9fba);
   border: 1px solid lightgray;
   border-radius: 8px;
   padding: 10px;
-  width: 550px !important;
+  width: 600px !important;
   height: 690px;
   margin: 50px 30px 5px;
 }
@@ -28,5 +33,4 @@
   height: 150px;
   position: relative;
   top: 120px;
-  line-break: ;
 }
