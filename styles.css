@@ -7,6 +7,31 @@ main {
   margin-top: 40px;
 }
 
+.done,
+.edit,
+.delete {
+  background: linear-gradient(#cee5ff, #7364d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 150ms ease-in-out;
+  font-size: 16px;
+}
+
+.done:hover,
+.edit:hover,
+.delete:hover {
+  background: #6256b4;
+  font-size: medium !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.done:active,
+.edit:active,
+.delete:active {
+  opacity: 0.5;
+}
+
 .container {
   background: linear-gradient(#f8effc, #ae9fba);
   border: 1px solid lightgray;
@@ -24,6 +49,10 @@ main {
   font-size: smaller;
   padding: 2px 6px;
   margin: 0 1rem;
+}
+
+.content .text:not(:read-only) {
+  color: red !important;
 }
 
 .h1 {
@@ -93,6 +122,7 @@ button {
 
 #new-task-submit:hover {
   background: #6256b4;
+  font-size: 18px !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
