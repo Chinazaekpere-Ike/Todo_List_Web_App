@@ -67,11 +67,6 @@ main {
   font-size: 9px !important;
 }
 
-.new-task-form {
-  display: flex;
-  justify-content: space;
-}
-
 .subnotes {
   border: 1px solid green;
   border-radius: 8px;
@@ -104,8 +99,13 @@ button {
   background: none;
 }
 
+#new-task-form {
+  display: flex;
+  justify-content: space;
+}
+
 #new-task-input {
-  background: #fff;
+  background: #e8f0fe;
   flex: 1 1 0%;
   padding: 8px 16px;
   border-radius: 1rem;
@@ -122,7 +122,7 @@ button {
 
 #new-task-submit:hover {
   background: #6256b4;
-  font-size: 18px !important;
+  font-size: 17px !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
