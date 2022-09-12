@@ -30,7 +30,7 @@
 
       <h1 class="h1 d-flex justify-content-center my-5">To do list</h1>
 
-      <form>
+      <form class="new-task-form">
         <input
           type="text"
           id="new-task-input"
@@ -39,24 +39,33 @@
         <input type="submit" id="new-task-submit" value="Add task" />
       </form>
 
-      <h3>Tasks</h3>
+      <main>
+        <section class="task-list">
+          <h3>Tasks</h3>
 
-      <div class="actions">
-        <button class="done"><i class="fa-solid fa-check"></i></button>
-      </div>
-
-      <div id="tasks">
-        <div class="classtask">
-          <div class="content">
-            <input type="text" class="text" value="My shiny tasks" readonly />
+          <div id="tasks">
+            <div class="task">
+              <button class="done actions">
+                <i class="fa-solid fa-check"></i>
+              </button>
+              <div class="content">
+                <input
+                  type="text"
+                  class="text text-dark text-opacity-50"
+                  value="My shiny tasks"
+                  readonly
+                />
+              </div>
+              <div class="actions">
+                <button class="edit"><i class="fa-solid fa-pencil"></i></button>
+                <button class="delete">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div class="actions">
-        <button class="edit"><i class="fa-solid fa-pencil"></i></button>
-        <button class="delete"><i class="fa-solid fa-circle-xmark"></i></button>
-      </div>
+        </section>
+      </main>
 
       <div class="d-flex justify-content-around">
         <h5 class="h5 subnotes text-center">
