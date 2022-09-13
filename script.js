@@ -19,6 +19,7 @@ function formActions(event) {
   task_input_el.classList.add("text");
   task_input_el.type = "text";
   task_input_el.value = task;
+  task_input_el.maxLength = "100";
   task_input_el.setAttribute("readonly", "readonly");
 
   let task_actions_el = document.createElement("div");
@@ -26,7 +27,7 @@ function formActions(event) {
 
   let task_done_el = document.createElement("button");
   task_done_el.classList.add("done");
-  task_done_el.innerHTML = `<i class="fa-solid fa-check"></i>`;
+  task_done_el.innerHTML = `<i class="fa-regular fa-square"></i>`;
 
   let task_edit_el = document.createElement("button");
   task_edit_el.classList.add("edit");
@@ -56,6 +57,16 @@ function formActions(event) {
     } else {
       task_input_el.setAttribute("readonly", "readonly");
       task_edit_el.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
+    }
+  });
+
+  task_done_el.addEventListener("click", function doneButton() {
+    if (task_done_el.innerHTML == `<i class="fa-regular fa-square"></i>`) {
+      task_done_el.innerHTML = `<i class="fa-regular fa-square-check"></i>`;
+      task_input_el.classList.add("strike-through");
+    } else {
+      task_done_el.innerHTML = `<i class="fa-regular fa-square"></i>`;
+      task_input_el.classList.remove("strike-through");
     }
   });
 }
