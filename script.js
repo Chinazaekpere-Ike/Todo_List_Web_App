@@ -47,6 +47,17 @@ function formActions(event) {
   task_actions_el.appendChild(task_delete_el);
 
   formInput.value = "";
+
+  task_edit_el.addEventListener("click", function editButton() {
+    if (task_edit_el.innerHTML == `<i class="fa-solid fa-pencil"></i>`) {
+      task_edit_el.innerHTML = `<i class="fa-solid fa-sd-card"></i>`;
+      task_input_el.removeAttribute("readonly");
+      task_input_el.focus();
+    } else {
+      task_input_el.setAttribute("readonly", "readonly");
+      task_edit_el.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
+    }
+  });
 }
 
 function gettingHTML() {
