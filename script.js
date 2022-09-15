@@ -1,3 +1,36 @@
+function currentDate() {
+  let dateDisplay = document.querySelector("#date");
+
+  let now = new Date();
+  let daysofWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = daysofWeek[now.getDay()];
+  let hour = now.getHours();
+  let minute = now.getMinutes();
+  let date = now.getDate();
+  let month = now.getMonth() + 1;
+  let year = now.getFullYear();
+
+  if (hour > 12) {
+    hour = hour - 12;
+    dateDisplay.innerHTML = `${day}, ${hour}:${minute} PM
+        <br />
+        ${date}/${month}/${year}`;
+  } else {
+    dateDisplay.innerHTML = `${day}, ${hour}:${minute} AM
+        <br />
+        ${date}/${month}/${year}`;
+  }
+}
+
 function formActions(event) {
   event.preventDefault();
   let formInput = document.querySelector("#new-task-input");
@@ -81,3 +114,5 @@ function gettingHTML() {
 }
 
 window.addEventListener("load", gettingHTML);
+
+currentDate();
