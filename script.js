@@ -69,6 +69,10 @@ function formActions(event) {
       task_input_el.classList.remove("strike-through");
     }
   });
+
+  task_delete_el.addEventListener("click", function deleteButton() {
+    taskList.removeChild(task_el);
+  });
 }
 
 function gettingHTML() {
