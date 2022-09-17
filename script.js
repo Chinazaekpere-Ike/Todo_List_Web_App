@@ -52,7 +52,7 @@ function formActions(event) {
   task_input_el.classList.add("text");
   task_input_el.type = "text";
   task_input_el.value = task;
-  task_input_el.maxLength = "100";
+  task_input_el.maxLength = "70";
   task_input_el.setAttribute("readonly", "readonly");
 
   let task_actions_el = document.createElement("div");

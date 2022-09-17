@@ -1,3 +1,7 @@
+body {
+  background: linear-gradient(#f8effc, #ae9fba);
+}
+
 button {
   color: #7364d2;
   font-size: 13px !important;
@@ -7,10 +11,21 @@ main {
   margin-top: 40px;
 }
 
+.dark-mode {
+  text-decoration: none;
+  color: #39375b;
+  transition: 150ms ease-in-out;
+}
+
+.dark-mode:hover {
+  text-decoration: underline;
+  color: #39375b;
+}
+
 .done,
 .edit,
 .delete {
-  background: linear-gradient(#cee5ff, #7364d2);
+  background: linear-gradient(#565656, #7364d2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 150ms ease-in-out;
@@ -20,8 +35,8 @@ main {
 .done:hover,
 .edit:hover,
 .delete:hover {
-  background: #6256b4;
-  font-size: medium !important;
+  background: #565656;
+  font-size: 18px !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -32,31 +47,43 @@ main {
   opacity: 0.5;
 }
 
+.foot-notes {
+  height: 300px;
+}
+
 .container {
-  background: linear-gradient(#f8effc, #ae9fba);
-  border: 1px solid lightgray;
-  border-radius: 8px;
   padding: 10px;
-  width: 600px !important;
-  height: 690px;
+  width: 700px !important;
+  height: auto;
   margin: 50px 30px 5px;
 }
 
 .content {
   display: flex;
   flex: 1 1 0%;
+  font-family: "Inconsolata", monospace;
 }
 
 .content .text:not(:read-only) {
-  color: red !important;
+  color: purple !important;
 }
 
 .h1 {
   font-size: 75px !important;
+  font-family: "Short Stack", cursive;
+  color: #3f3a68;
+}
+
+h3 {
+  font-family: "Smooch", cursive;
+  color: #6a668a;
 }
 
 .h5 {
   font-size: 12px !important;
+  font-family: "Nunito Sans", sans-serif;
+  color: gray;
+  opacity: 0.6;
 }
 
 .h6 {
@@ -64,7 +91,7 @@ main {
 }
 
 .subnotes {
-  border: 1px solid green;
+  border: 1px solid purple;
   border-radius: 8px;
   border-style: dashed;
   width: 200px;
@@ -110,15 +137,16 @@ button {
 }
 
 #new-task-input {
-  background: #e8f0fe;
+  background: #f0f5fd;
   flex: 1 1 0%;
   padding: 8px 16px;
   border-radius: 1rem;
   margin-right: 1rem;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 #new-task-submit {
-  background: linear-gradient(#cee5ff, #7364d2);
+  background: linear-gradient(#cee5ff, #3f3a68);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 150ms ease-in-out;
@@ -126,7 +154,7 @@ button {
 }
 
 #new-task-submit:hover {
-  background: #6256b4;
+  background: #3f3a68;
   font-size: 17px !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -134,4 +162,28 @@ button {
 
 #new-task-submit:active {
   opacity: 0.5;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 235px !important;
+    height: auto;
+  }
+
+  .h1 {
+    font-size: 45px;
+    color: red;
+  }
+}
+
+@media (max-width: 1007px) {
+  .container {
+    width: 500px !important;
+    height: auto;
+  }
+
+  .h1 {
+    font-size: 60px;
+    color: green;
+  }
 }
