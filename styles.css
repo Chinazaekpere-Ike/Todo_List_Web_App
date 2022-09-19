@@ -97,10 +97,18 @@ main {
   font-size: 9px !important;
 }
 
-.subnotes {
+.notes {
+  position: relative;
   border: 1px solid var(--primary-color);
-  border-radius: 8px;
   border-style: dashed;
+  border-radius: 8px;
+  width: 200px;
+  height: 150px;
+  background: #f8effc;
+  color: var(--primary-color);
+}
+
+.subnotes {
   width: 200px;
   height: 150px;
   position: relative;
