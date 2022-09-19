@@ -1,3 +1,13 @@
+let themeButton = document.querySelector("#theme");
+themeButton.addEventListener("click", function changeTheme() {
+  document.body.classList.toggle("dark-theme");
+  if (document.body.classList.contains("dark-theme")) {
+    themeButton.innerHTML = "Light mode?";
+  } else {
+    themeButton.innerHTML = "Dark mode?";
+  }
+});
+
 function currentDate() {
   let dateDisplay = document.querySelector("#date");
 
@@ -22,6 +32,10 @@ function currentDate() {
   if (hour > 12) {
     hour = hour - 12;
     dateDisplay.innerHTML = `${day}, ${hour}:${minute} PM
+        <br />
+        ${date}/${month}/${year}`;
+  } else if ((hour = 12)) {
+    dateDisplay.innerHTML = `${day}, 12:${minute} PM
         <br />
         ${date}/${month}/${year}`;
   } else {

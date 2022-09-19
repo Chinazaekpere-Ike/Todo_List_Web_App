@@ -1,9 +1,26 @@
+:root {
+  --action-keys-gradient: #565656, #7364d2;
+  --background-gradient: #f8effc, #ae9fba;
+  --new-task-background-color: #f0f5fd;
+  --primary-color: #3f3a68;
+  --task-submit-gradient: #f0f5fd, #3f3a68;
+  --text-background-color: #fff;
+}
+
+.dark-theme {
+  --action-keys-gradient: #565656, violet;
+  --background-gradient: #000, #374151;
+  --new-task-background-color: #dedcdc;
+  --primary-color: #eee;
+  --task-submit-gradient: #f0f5fd, violet;
+  --text-background-color: #f0f5fd;
+}
+
 body {
-  background: linear-gradient(#f8effc, #ae9fba);
+  background: linear-gradient(var(--background-gradient));
 }
 
 button {
-  color: #7364d2;
   font-size: 13px !important;
 }
 
@@ -11,21 +28,10 @@ main {
   margin-top: 40px;
 }
 
-.dark-mode {
-  text-decoration: none;
-  color: #39375b;
-  transition: 150ms ease-in-out;
-}
-
-.dark-mode:hover {
-  text-decoration: underline;
-  color: #39375b;
-}
-
 .done,
 .edit,
 .delete {
-  background: linear-gradient(#565656, #7364d2);
+  background: linear-gradient(var(--action-keys-gradient));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 150ms ease-in-out;
@@ -35,7 +41,7 @@ main {
 .done:hover,
 .edit:hover,
 .delete:hover {
-  background: #565656;
+  background: var(--primary-color);
   font-size: 18px !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -71,12 +77,13 @@ main {
 .h1 {
   font-size: 75px !important;
   font-family: "Short Stack", cursive;
-  color: #3f3a68;
+  color: var(--primary-color);
 }
 
-h3 {
+.h3 {
   font-family: "Smooch", cursive;
-  color: #6a668a;
+  color: var(--primary-color);
+  opacity: 0.7;
 }
 
 .h5 {
@@ -91,7 +98,7 @@ h3 {
 }
 
 .subnotes {
-  border: 1px solid purple;
+  border: 1px solid var(--primary-color);
   border-radius: 8px;
   border-style: dashed;
   width: 200px;
@@ -116,7 +123,7 @@ h3 {
 }
 
 .text {
-  background: #fff;
+  background: var(--text-background-color);
   border-radius: 12px;
   flex: 1 1 0%;
   font-size: smaller;
@@ -132,12 +139,23 @@ button {
   background: none;
 }
 
+#theme {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: 150ms ease-in-out;
+}
+
+#theme:hover {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
 #new-task-form {
   display: flex;
 }
 
 #new-task-input {
-  background: #f0f5fd;
+  background: var(--new-task-background-color);
   flex: 1 1 0%;
   padding: 8px 16px;
   border-radius: 1rem;
@@ -146,7 +164,7 @@ button {
 }
 
 #new-task-submit {
-  background: linear-gradient(#cee5ff, #3f3a68);
+  background: linear-gradient(var(--task-submit-gradient));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 150ms ease-in-out;
@@ -154,7 +172,7 @@ button {
 }
 
 #new-task-submit:hover {
-  background: #3f3a68;
+  background: var(--primary-color);
   font-size: 17px !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -162,28 +180,4 @@ button {
 
 #new-task-submit:active {
   opacity: 0.5;
-}
-
-@media (max-width: 576px) {
-  .container {
-    width: 235px !important;
-    height: auto;
-  }
-
-  .h1 {
-    font-size: 45px;
-    color: red;
-  }
-}
-
-@media (max-width: 1007px) {
-  .container {
-    width: 500px !important;
-    height: auto;
-  }
-
-  .h1 {
-    font-size: 60px;
-    color: green;
-  }
 }
