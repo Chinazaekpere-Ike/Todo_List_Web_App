@@ -193,7 +193,6 @@ button {
 
 @media (max-width: 1007px) {
   .h1 {
-    color: green;
     font-size: 47px !important;
   }
   .container {
@@ -208,7 +207,6 @@ button {
 
 @media (max-width: 640px) {
   .h1 {
-    color: red;
     font-size: 30px !important;
   }
 
